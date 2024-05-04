@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <!-- html2pdf CDN-->
+  <script src=
+            "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js">
+  </script>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      position: fixed;
+      top: 20%;
+      left: 28%;
+      margin-top: -65px;
+      margin-left: -100px;
+      border-radius: 7px;
+    }
+
+    .card {
+      box-sizing: content-box;
+      width: 780px;
+      font-family: "Times New Roman";
+    }
+
+    #button {
+      background-color: #4caf50;
+      border-radius: 5px;
+      margin-left: 650px;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      color: #24650b;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <button id="button">Generate PDF</button>
+  <div style="position: relative" class="card" id="makepdf">
+    <img style="width: 100%" src="./img/matpomosh2.png" alt="">
+    <input  class="input1" value="test1" type="text">
+    <input  class="input2" value="test2" type="text">
+    <input  class="input3" value="test3" type="text">
+    <input  class="input4" value="test4" type="text">
+    <input  class="input5" value="00" type="text">
+    <input  class="input6" value="00" type="text">
+    <input  class="input7" value="23" type="text">
+    <br>
+    <br>
+
+
+  </div>
+
+  <div style="margin-left: 110px; font-size: 18px;margin-top: 20px;">
+    Для подачи заявления необходимо прикрепить следующие документы:    <br>
+    <br>
+    - копия паспорта (страницы с фото и с пропиской);    <br>
+    <br>
+    или    <br>
+    <br>
+    - документ с места жительства, подтверждающий основание для выплаты.
+
+  </div>
+  <style>
+
+
+    .input1{
+      position: absolute;
+      top: 105px;
+      background: none;
+      right: -90px;
+      border: none;
+      font-family: "Times New Roman";
+      font-size: 17px;
+    }
+
+    .input2{
+      position: absolute;
+      top: 138px;
+      background: none;
+      right: 36px;
+      border: none;
+      width: 220px;
+      font-family: "Times New Roman";
+      font-size: 17px;
+    }
+
+    .input3{
+      position: absolute;
+      background: none;
+      top: 200px;
+      right: -92px;
+      border: none;
+      font-family: "Times New Roman";
+      font-size: 17px;
+    }
+
+    .input4{
+      position: absolute;
+      background: none;
+      top: 234px;
+      right: -7px;
+      border: none;
+      font-family: "Times New Roman";
+      font-size: 17px;
+    }
+
+    .input5{
+      position: absolute;
+      background: none;
+      top: 457px;
+      right: 648px;
+      border: none;
+      font-family: "Times New Roman";
+      font-size: 17px;
+      width: 22px;
+    }
+    .input6{
+      position: absolute;
+      background: none;
+      top: 457px;
+      right: 618px;
+      border: none;
+      font-family: "Times New Roman";
+      font-size: 17px;
+      width: 22px;
+    }
+    .input7{
+      position: absolute;
+      background: none;
+      top: 456px;
+      right: 570px;
+      border: none;
+      font-family: "Times New Roman";
+      font-size: 19px;
+      width: 22px;
+    }
+
+  </style>
+
+<script>
+  let button = document.getElementById("button");
+  let makepdf = document.getElementById("makepdf");
+
+  button.addEventListener("click", function () {
+    html2pdf().from(makepdf).save();
+  });
+</script>
+</body>
+</html>
